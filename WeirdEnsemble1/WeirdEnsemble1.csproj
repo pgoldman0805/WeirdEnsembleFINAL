@@ -38,14 +38,75 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.9\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web">
+      <HintPath>..\packages\MySql.Web.6.9.9\lib\net45\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />
     <Folder Include="Models\" />
     <Folder Include="Scripts\" />
+    <Folder Include="App_Start\" />
+    <Folder Include="Content\styles\" />
+    <Folder Include="Views\Product\" />
+    <Folder Include="Views\About\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="Views\Contact\" />
+    <Folder Include="Content\fonts\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -55,6 +116,90 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Global.asax" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1-vsdoc.js" />
+    <Content Include="Content\styles\bootstrap.css" />
+    <Content Include="Content\styles\bootstrap.min.css" />
+    <Content Include="Content\styles\bootstrap-theme.css" />
+    <Content Include="Content\styles\bootstrap-theme.min.css" />
+    <Content Include="Content\styles\main.css" />
+    <Content Include="Content\styles\normalize.css" />
+    <Content Include="Content\styles\font-awesome.css" />
+    <Content Include="Content\styles\font-awesome.min.css" />
+    <Content Include="Scripts\adorableavatar.js" />
+    <Content Include="Scripts\gravatar.js" />
+    <Content Include="Content\images\bg\bg_organ_cart.jpg" />
+    <Content Include="Content\images\bg\bg_speaker_grill.jpg" />
+    <Content Include="Content\images\people\accordion_man.jpg" />
+    <Content Include="Content\images\people\bagpipes_man.jpg" />
+    <Content Include="Content\images\people\bagpipes_man_good.jpg" />
+    <Content Include="Content\images\people\hurdy_gurdy_lady.jpg" />
+    <Content Include="Content\images\products\accordion\Hohner_SteveJordan_TexMex_Rockordeon.jpg" />
+    <Content Include="Content\images\products\accordion\Pietro_Premier_Combo2.JPG" />
+    <Content Include="Content\images\products\accordion\Roland_FR18_VAccordion.jpg" />
+    <Content Include="Content\images\products\accordion\Roland_fr8x_dallape.jpg" />
+    <Content Include="Content\images\products\banjo\Deering-Classic-Goodtime-Special-Openback-Banjo_1.jpg" />
+    <Content Include="Content\images\products\banjo\Fender_concertTone_54.jpg" />
+    <Content Include="Content\images\products\banjo\Ibanez_FiveString.jpg" />
+    <Content Include="Content\images\products\hurdy_gurdy\maestro1.png" />
+    <Content Include="Content\images\products\hurdy_gurdy\moriah3.png" />
+    <Content Include="Content\images\products\keytar\Alesis_Vortex.jpg" />
+    <Content Include="Content\images\products\keytar\Roland_Ax1_red.jpg" />
+    <Content Include="Content\images\products\keytar\Roland_AxSynth.jpg" />
+    <Content Include="Content\images\products\keytar\Yamaha_SHS10.jpg" />
+    <Content Include="Content\images\products\melodica\Gear4music_melodica.jpg" />
+    <Content Include="Content\images\products\melodica\Hohner_student32_melodica.jpg" />
+    <Content Include="Content\images\products\misc\Acme_SlideWhistle_TH472.jpg" />
+    <Content Include="Content\images\products\misc\Ludwig_LM138_Vibraslap.jpg" />
+    <Content Include="Content\images\products\otomatone\otamatone_back.jpg" />
+    <Content Include="Content\images\products\otomatone\otamatone_group.jpg" />
+    <Content Include="Content\images\products\otomatone\otamatone_hands.jpg" />
+    <Content Include="Content\images\products\stylophone\stylophone-hands.jpg" />
+    <Content Include="Content\images\products\stylophone\stylophone.jpg" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_HeaderNavBar.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\styles\sign-in-register.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <None Include="Scripts\jquery-3.1.1.min.map" />
+    <None Include="Content\styles\bootstrap.css.map" />
+    <None Include="Content\styles\bootstrap.min.css.map" />
+    <None Include="Content\styles\bootstrap-theme.css.map" />
+    <None Include="Content\styles\bootstrap-theme.min.css.map" />
+    <None Include="Content\images\.DS_Store" />
+    <None Include="Content\images\bg\.DS_Store" />
+    <None Include="Content\images\bg\bg_blue_circles.jpeg" />
+    <None Include="Content\images\products\.DS_Store" />
+    <None Include="Content\images\products\accordion\.DS_Store" />
+    <None Include="Content\images\products\vuvuzela\vuvuzela_1.jpeg" />
+    <None Include="Content\fonts\fontawesome-webfont.woff2" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.woff2" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
